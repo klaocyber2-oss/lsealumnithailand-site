@@ -878,7 +878,15 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .tv-survey-btn:hover{transform:translateY(-2px)}
   .tv-survey-btn.is-soon{background:rgba(255,255,255,.18);color:#fff;border:2px dashed rgba(255,255,255,.7);box-shadow:none;cursor:default}
   .tv-survey-note{font-size:.75rem;color:#fecaca;text-align:center}
-  .tv-navsurvey{background:#d32727;color:#fff !important;font-weight:700}
+  .tv-navsurvey{background:#d32727;color:#fff !important;font-weight:700;margin-left:.6rem}
+  header nav a{white-space:nowrap}
+  header nav{margin-right:.9rem}
+  header .flex.items-center.gap-2 a{white-space:nowrap}
+  @media (max-width:1420px){header nav a:nth-child(6){display:none}}
+  @media (max-width:1300px){header nav a:nth-child(1){display:none}}
+  @media (max-width:1180px){header nav a:nth-child(5),header nav a:nth-child(3){display:none}}
+  @media (max-width:1000px){header nav a{padding-left:.5rem;padding-right:.5rem}header nav a:nth-child(7){display:none}}
+  @media (max-width:900px){header nav a:nth-child(4){display:none}}
   .tv-navsurvey:hover{background:#b51d1d}
   .tv-opts{grid-template-columns:1fr !important}
   @media (min-width:768px){.tv-d3row>div:nth-child(2){grid-column:span 10/span 10}.tv-d3row>div:nth-child(3){grid-column:3/span 10}}
