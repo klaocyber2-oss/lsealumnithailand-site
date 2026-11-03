@@ -985,13 +985,23 @@ svg.leaflet-image-layer.leaflet-interactive path {
   <!-- Main Content Container -->
   <main id="top" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-16">
 
-    <!-- ===== TRIP SURVEY NOTE ===== -->
+    <!-- ===== TRIP SURVEY BOX ===== -->
     <section id="survey" class="scroll-mt-20">
-      <div style="display:flex;gap:.9rem;align-items:flex-start;background:#fff;border:1px solid rgba(211,39,39,.25);border-left:5px solid #d32727;border-radius:16px;padding:1rem 1.2rem;box-shadow:0 4px 12px rgba(0,0,0,.04)">
-        <i class="fa-solid fa-envelope-open-text" style="color:#d32727;font-size:1.4rem;margin-top:.15rem"></i>
-        <div>
-          <div style="font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#d32727">Trip survey</div>
-          <p style="font-size:.95rem;color:#44403c;margin-top:.2rem">The survey link will be sent to you by email. Please fill it in so we can book rooms, safari trucks and dinners for everyone.</p>
+      <div class="tv-survey">
+        <div class="tv-survey-main">
+          <div class="tv-survey-k"><i class="fa-solid fa-clipboard-list"></i> Action needed · Trip survey</div>
+          <h2>Tell us your plans</h2>
+          <p>The survey link will be sent to you <strong style="color:#fff">by email</strong>. Please fill it in so we can book rooms, safari trucks and dinners for everyone.</p>
+          <ul>
+            <li><i class="fa-solid fa-hotel"></i> Your hotel &amp; room sharing</li>
+            <li><i class="fa-solid fa-plane"></i> Travel dates &amp; flights back to Singapore</li>
+            <li><i class="fa-solid fa-utensils"></i> Sunday dinner &amp; food requirements</li>
+            <li><i class="fa-solid fa-moon"></i> Night safari, Day 2 track &amp; last-morning options</li>
+          </ul>
+        </div>
+        <div class="tv-survey-cta">
+          <div class="tv-survey-btn is-soon"><i class="fa-solid fa-envelope"></i> Survey link will be sent by email</div>
+          <span class="tv-survey-note">Please check your inbox (and spam folder). Takes about 3 minutes; answers are seen only by the organisers.</span>
         </div>
       </div>
     </section>
