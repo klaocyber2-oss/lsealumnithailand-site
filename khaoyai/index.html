@@ -942,6 +942,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .tvf-l{transition:transform .2s linear}
   .tvf-body{position:relative;background:#2c3a2f;padding:1.5rem 0 2.5rem}
   @media (prefers-reduced-motion:reduce){.tvf-mist,.tvf-sun,.tvf-bird,.tvf-sway,.tvf-fly{animation:none}.tvf-fly{opacity:.7}}
+  @media (min-width:769px){
+    .tv-hero{display:flex;flex-direction:column;height:auto;min-height:min(94vh,920px);max-height:none}
+    .tv-inner{flex:1 0 auto;width:100%;height:auto;padding:7.5rem 1.5rem 2.75rem;justify-content:flex-end}
+    .tv-facts{position:relative;left:auto;bottom:auto;transform:none;width:calc(100% - 3rem);max-width:77rem;margin:0 auto 3rem}
+    .tv-fact{padding:1.35rem 1.6rem}
+  }
+  .tv-fact b{margin-top:.35rem}
+  @media (max-width:768px){.tv-fact b{font-size:1.15rem}.tv-fact{padding:1rem 1.1rem}}
 </style>
 </head>
 <body class="antialiased selection:bg-lse-red selection:text-white">
