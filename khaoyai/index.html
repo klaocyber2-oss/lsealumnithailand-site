@@ -905,7 +905,25 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .tv-opt a{color:#d32727;font-weight:600;white-space:nowrap}
   .tv-opt a:hover{text-decoration:underline}
   .tv-opt .tag{display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;background:#fde68a;color:#78350f;padding:.1rem .45rem;border-radius:999px;margin-left:.3rem}
-</style></head>
+</style><style id="tv-polish">
+  main#top{--gap:6rem}
+  main#top.space-y-16>:not([hidden])~:not([hidden]){margin-top:var(--gap)}
+  @media (max-width:640px){main#top{--gap:3.5rem}}
+  main#top>#survey{margin-top:1rem}
+  .tv-sec-k{display:inline-flex;align-items:center;gap:.5rem;margin-bottom:.6rem}
+  .tv-sec-t{text-wrap:balance;letter-spacing:-.01em}
+  .tv-sec-p,.tv-head p{color:#57534e;max-width:42rem;margin-top:.6rem;font-size:1rem;line-height:1.6}
+  .tv-head{margin-bottom:2.25rem}
+  h1,h2,h3,h4{text-wrap:balance}
+  p{text-wrap:pretty}
+  #highlights>div:first-child,#stay>div:first-child{margin-bottom:2.25rem !important}
+  #coordinators>div:first-child,#interactive-map>div:first-child,#weather>div:first-child{margin-bottom:2.25rem;padding-bottom:1.75rem;border-bottom:1px solid #e7e5e4}
+  #itinerary.space-y-10>:not([hidden])~:not([hidden]){margin-top:3rem}
+  #packing.space-y-8>:not([hidden])~:not([hidden]){margin-top:2.5rem}
+  #photo-credits{margin-top:4rem !important}
+  @media (max-width:640px){.tv-glance-btns{display:grid;grid-template-columns:1fr;gap:.6rem}.tv-glance-btns>*{justify-content:center;text-align:center;width:100%}.tv-glance-btns>:first-child{grid-column:1/-1}}
+</style>
+</head>
 <body class="antialiased selection:bg-lse-red selection:text-white">
 
   <!-- Sticky Top Navigation Bar -->
@@ -1014,7 +1032,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
       <!-- Left Column: Tour Operator Welcome & Executive Overview -->
       <div class="lg:col-span-6 space-y-6">
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-lse-red/10 border border-lse-red/20 text-lse-red text-xs font-semibold tracking-wider uppercase">
-          <i class="fa-solid fa-compass"></i> Official Tour Operator Digital Concierge
+          <i class="fa-solid fa-compass"></i> Trip Overview
         </div>
 
         <h2 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-lse-forest leading-[1.08] tracking-tight">
@@ -1053,7 +1071,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
         </div>
 
         <!-- Quick Navigation Pills -->
-        <div class="flex flex-wrap items-center gap-3 pt-2">
+        <div class="flex flex-wrap items-center gap-3 pt-2 tv-glance-btns">
           <a href="#interactive-map" class="inline-flex items-center gap-2 bg-lse-forest hover:bg-stone-800 text-white font-medium px-5 py-3 rounded-xl shadow transition text-sm">
             <i class="fa-solid fa-location-arrow"></i> View Sequenced Route Map
           </a>
@@ -1248,17 +1266,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <!-- SECTION 1.5: TRIP COORDINATORS — LSE ALUMNI THAILAND       -->
     <!-- ========================================================== -->
     <section id="coordinators" class="scroll-mt-20 bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm border border-stone-200/90 relative overflow-hidden">
-      <!-- Subtle decorative top bar -->
-      <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-lse-red via-lse-bronze to-lse-forest"></div>
-
       <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-8 pb-5 border-b border-stone-200">
         <div>
-          <div class="inline-flex items-center gap-2 text-lse-red text-xs font-bold uppercase tracking-widest mb-1.5">
-            <span class="w-2 h-2 rounded-full bg-lse-red"></span> Host Committee &amp; On-Ground Concierge
-          </div>
-          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-lse-forest">
-            Trip Coordinators — LSE Alumni Association Thailand
-          </h2>
+          <div class="tv-sec-k"><i class="fa-solid fa-user-tie"></i> Trip Coordinators</div>
+          <h2 class="tv-sec-t">Your hosts on the ground</h2>
           <p class="text-stone-600 text-sm sm:text-base mt-1 max-w-3xl">
             For any assistance before or during the Khao Yai retreat—including convoy coordination, National Park track selection, or dietary requests—please reach out directly to our Thailand host coordinators via Phone or WhatsApp.
           </p>
@@ -1495,12 +1506,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <section id="interactive-map" class="scroll-mt-20 bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm border border-stone-200/90">
       <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6">
         <div>
-          <span class="text-lse-red text-xs font-bold uppercase tracking-widest block mb-1">
-            <i class="fa-solid fa-satellite-dish mr-1"></i> Live Sequenced Cartography
-          </span>
-          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-lse-forest">
-            Interactive Travel Route &amp; Coordinates Map
-          </h2>
+          <div class="tv-sec-k"><i class="fa-solid fa-map-location-dot"></i> Route Map</div>
+          <h2 class="tv-sec-t">Every stop, in order</h2>
           <p class="text-stone-600 text-sm sm:text-base mt-1">
             Select a day or track below to plot the exact stop order (1 &rarr; 2 &rarr; 3), view directional lines, and open multi-stop turn-by-turn navigation in Google Maps.
           </p>
@@ -1568,14 +1575,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <!-- SECTION 3: DETAILED DAY-BY-DAY HANDBOOK    -->
     <!-- ========================================== -->
     <section id="itinerary" class="scroll-mt-20 space-y-10">
-      <div class="text-center max-w-3xl mx-auto">
-        <span class="text-lse-red text-xs font-bold uppercase tracking-widest block mb-1">
-          <i class="fa-regular fa-clock mr-1"></i> Chronological Tour Playbook
-        </span>
-        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-lse-forest">
-          Detailed Day-by-Day &amp; Track-by-Track Schedule
-        </h2>
-        <p class="text-stone-600 text-sm sm:text-base mt-2">
+      <div class="tv-head">
+        <div class="tv-sec-k"><i class="fa-regular fa-clock"></i> Daily Schedule</div>
+        <h2 class="tv-sec-t">Day by day, hour by hour</h2>
+        <p class="tv-sec-p">
           Complete departure times, highway navigation notes, leg-by-leg driving distances, and activity details for every moment of the trip.
         </p>
       </div>
@@ -2100,12 +2103,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <section id="weather" class="scroll-mt-20 bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm border border-stone-200/90">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
         <div>
-          <span class="text-lse-red text-xs font-bold uppercase tracking-widest block mb-1">
-            <i class="fa-solid fa-cloud-sun mr-1"></i> Meteorological Outlook
-          </span>
-          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-lse-forest">
-            Google Weather Forecast (21–23 November 2026)
-          </h2>
+          <div class="tv-sec-k"><i class="fa-solid fa-cloud-sun"></i> Weather</div>
+          <h2 class="tv-sec-t">Forecast for 21–23 November</h2>
           <p class="text-stone-600 text-sm sm:text-base mt-1">
             Late November marks the arrival of Khao Yai's cool winter breeze—expect crisp mornings on the mountain, sunny vineyard afternoons, and low (~10%) rain probability.
           </p>
@@ -2240,14 +2239,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <!-- SECTION 5: DRESS CODE & PACKING CHECKLIST  -->
     <!-- ========================================== -->
     <section id="packing" class="scroll-mt-20 space-y-8">
-      <div class="text-center max-w-3xl mx-auto">
-        <span class="text-lse-red text-xs font-bold uppercase tracking-widest block mb-1">
-          <i class="fa-solid fa-suitcase-rolling mr-1"></i> Preparation &amp; Attire Guide
-        </span>
-        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-lse-forest">
-          Dress Code &amp; Interactive Packing Checklist
-        </h2>
-        <p class="text-stone-600 text-sm sm:text-base mt-2">
+      <div class="tv-head">
+        <div class="tv-sec-k"><i class="fa-solid fa-suitcase-rolling"></i> Dress Code &amp; Packing</div>
+        <h2 class="tv-sec-t">What to wear, what to bring</h2>
+        <p class="tv-sec-p">
           Curated wardrobe recommendations for each setting and an interactive checklist you can tick off as you pack.
         </p>
       </div>
