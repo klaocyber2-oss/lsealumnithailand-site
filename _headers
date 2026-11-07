@@ -1,0 +1,11 @@
+# Keep the Khao Yai trip handbook out of search engines
+/khaoyai
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex
+/khaoyai/*
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex
+
+# Keep the Cloudflare preview address out of search engines
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex
