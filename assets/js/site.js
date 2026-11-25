@@ -19,6 +19,8 @@
       cur = (i + slides.length) % slides.length;
       slides.forEach((im, k) => { if (k === cur) im.loading = 'eager'; im.classList.toggle('on', k === cur); });
       btns.forEach((b, k) => b.setAttribute('aria-current', k === cur));
+      const cr = document.querySelector('.cover .credit'), im = slides[cur];
+      if (cr) { cr.hidden = !im.dataset.credit; cr.textContent = im.dataset.credit || ''; cr.href = im.dataset.creditUrl || '#'; }
     };
     const auto = () => { clearInterval(timer); if (!still) timer = setInterval(() => go(cur + 1), 6000); };
     btns.forEach((b, i) => b.addEventListener('click', () => { go(i); auto(); }));
