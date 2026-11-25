@@ -107,6 +107,7 @@ h3{font-size:24px;line-height:1.15}
 .cover .band{z-index:2}
 .slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity 1.4s ease,transform 7s ease-out}
 .slides img.on{opacity:1;transform:scale(1)}
+.slides img.globe{object-position:0% 50%}
 .dots{position:absolute;right:max(5vw,20px);bottom:18px;z-index:3;display:flex;gap:2px}
 .dots button{width:36px;height:44px;border:0;background:none;cursor:pointer;display:grid;place-items:center;padding:0}
 .dots button::before{content:"";width:22px;height:4px;border-radius:2px;background:rgba(255,255,255,.45);transition:background .3s,width .3s}
@@ -303,6 +304,7 @@ details p{color:var(--mute);margin:-6px 0 22px;max-width:44em}
   .nav .btn{margin:8px 0 0}
 }
 @media (max-width:640px){
+  .slides img.globe{object-position:38% 50%}
   .acts{grid-template-columns:minmax(0,1fr)}
   .alums{grid-template-columns:minmax(0,1fr)}
   .event.has-img{grid-template-columns:minmax(0,1fr)}
