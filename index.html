@@ -1,20 +1,252 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LSE Alumni Thailand</title>
-<link rel="icon" href="data:image/png;base64,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">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
-<style>
-body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#f4f3eb;font-family:'Plus Jakarta Sans',sans-serif;color:#2c3a2f}
-.c{text-align:center;padding:2rem;max-width:34rem}
-img{width:84px;height:84px;border-radius:6px}
-h1{font-family:'Cormorant Garamond',serif;font-size:2.6rem;margin:1rem 0 .3rem}
-p{color:#5c6b57;margin:0 0 2rem}
-a{display:inline-block;background:#d32727;color:#fff;text-decoration:none;font-weight:600;padding:.9rem 1.4rem;border-radius:14px}
-a:hover{background:#b51d1d}
-small{display:block;margin-top:1rem;color:#78716c}
-</style></head><body><div class="c">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAIAAAAiOjnJAAAOJUlEQVR42u2deXRURRaHq+otvabTCYFAENkVFFREQXHDBUUU0UFGYVxxXMYRPTrqOOIZz4weR1COuzK4oKLMQRjwuIEKCCiDCijKoiibhglLlk53ujv9tqr5Yzzu5NVrujsJ/ftO/nwvS+XrW/dV3bqPboz2JwDkGjVMGUYB5F4sgTEAeQDhCkAsALEAxAIAYgGIBSAWABALQCwAsQCAWABiAYgFAMQCEAtALAAgFoBYAGIBALEAxAIQCwCIBSAWgFgAQCwAsQDEAgBiAYgFIBYAEAtALHDAo7bCzxQyXQQpoe1kCH/551CanzHZDyg90MXiXDhcYhwoUZW2qBHngnPicMI54YIojCgKoYSIH30iGCPMy1TgcCE4yZ9alFBKiaIcsGIJ0woMPy58+TjXK61t3yamzRCWVfiP2j7+946wHcI5i5aqlRVq7+5an+5ql0pWFqVBP2GMcP79ZyL18oL0uyuorsuNiRkePyZw1il5FctcvznxyLOE0oKNp1rgf4/au0do3LmuF5qff5F4+BliilYXS1gWcbhS2dE35MjAiJP0QQO1Q3uxcKiFW4w1n5GF7xFd7gfYjm/wwNCF5+b1r1A6dkw8/EwhB1Mt/Edf6t9pmK2fO1kWJUQfeFjo4tHBc07XeneXvdN2PP4gO/9zhVkEyXvbx3GE7fgGDYhcf1lg9AhWEsKQQKz9/nBnDKVLp9Kbrgpf8VsWCWNAIFYunvgsO3D2qeX33q7174PxgFi5wLaJqkb/ckPpbddRn47xgFi5sYqGQ+UP/jU8YQwGA2LlzCoWjXSYfn9w1GkYDIK9wlw9ANJwEFZBrFxv8zFWPvUuWAWxcrxsGLnpqvAlv4EHECt3VhmG/7QTon++PvffWmlz2+dUU5G8Fyi1YhXl5ffdQQP+/fk2vCnp1Oxx6mPEtL7fhHaqa4iS+0+svXOX9dU2ylgWNTPG2vUF3nUtUrGEZZdef7k+sF92mZn1xdfNS1ZmVq4xN27mjXFiWOJH1Q2Ec+rz5fx3bn5raf2t90gWTfy8GEsIwhjEyrtV2mGHRK6e4PlG225+Z0XyhbmZD1bzWJwQQlWVMPqTSjpBCM1PYR3nxHKI4nj/g/P2K0GsnzwJCh65ZgIrj3q6z/h4XeP9T2SWrhSmRXWN+n37Kn7KYxUoy6qgihIskObfK8fR+vb0VP8kbDvxxPPxqdN5LE59+j6VAkUdsWwneP5IVl4qa1U603D7vU0z51BVg1IQa19pimCRcOiCkfILXfW3/C35/Cs04G8rRdIE61htcB60Lf3Iw7R+siUx8Wkzki/MhVUQyz1i+U88luqaVLa+am3i4WeorsMqiOW+AO0/cYhkwt74wHSeSOVjqRNiHWgFoqyiXO3bU+Zac836zPIPqR8VfxDLPQg56sFdlQ5lMhen31gs0s2YBCGWVMRSKjtKbQ7ajrHmM0yCEEsWtUdXmcuchphds4cyBX5ALKktEbVHN6nQFkvw2vrvNgEBxHIXq6qzlFgNMZ5KF7gcAGK1Y7GUjh2kpsK6hrz3FYJYB0xRA/XpNBSQilipZgKvIJZkTRLVddkKXcFhBsSSNkuhRO5Bj/kDBIk7xPJQSCk3w7GKKIFZEEu2/NKyhFznKqVTBQsFkb9DLCmzhGGSjCE1KB07KFWdJHvEgSKPWETYjhNrlIpYZVG118EyTXgBIhYhQjg1eyQt9B83+Id+tQBiuZwH3FEtea3/lKEUaRbEksT6eofklfqAQ/V+vQvQdhZitX8U5myv5qm01GQYCARGDkf+DrEkXFEUa0e1s2uv5PXB885iZaXItCCW69/KRLzJXLdJfjb0DztGWBYsgVjux6Az738kPTY0fOlYqihI4SGWe+cqY9UnvCkpeXlgxMn6kYcjhYdYbmmWqlhfbzc/3Sh7fdAfvuJCIjhBGQ3EannHUBhG+o135e8IjR2l9e8rLDweQiy3oNW8aDlvaJQdoGhpycSLsO4AsdzTLGv7t+lFy+TvCI8fo/fri0wLYrnVz3CRnL1A/uVvrCxacu0ELGhBLDe1dM1YtTazcrWHTGv8GP2I/gRrWhDLJYVvNhJPz5ZfoGKRksikK1t/PUuIbL4gViGDVvPby42PPvUQtC4Y6R92TGu++lUU/EaCjn5ZbO+k0onHZ3YcOkiy8wcN+Ev/dI2xeh0RrfOm6sDZwzt1q/J8jJaS5Mw56TeXSnYFg1j7HbR8enrhssyyVf5Th8n+a884MTjqtNSCRa3SjFTtfpDa/aAsbswsW1X4J48iPkVOqcgYjdNmeNhmVpTS265j0Ug7e0JsjUW4om5PQHU9s/zD9PyF8rfoRx0evnSsMAwCIFaLnfVFfNoM+YV4QkjkxonaoX1QTgOxWu5KqpkbNiemz/KQ63TtHL37ZpTTQCz3jrdN/3zJ3PSVh6WHMWcGzx8pMpgQIVaLKblT2xC/73Ehn+QyFp08SamqlN8XglhFuvSQev3d9GvvyN+i9e0Zuekq4Tio1IJYLS09UM7j/3iC18fkbyqZeLHvuKOFZWL8IFYLIUgzN2yOP/qch7ELB6OTJ1Gfj3BELYjV4hNi0zOzzU82yN8SOHVYeNy5WNaCWC4nWnlDPP7Q0x4iEKWRW69VqipRYgqxWvTE70u/uST9znIPU2ifHpFrL2nT66WqguqGtnDawoxPedJ/0hAWCspm8VdPSL7yurV5m2yP06wwN35l/GcNURSvuwvW+s1UUSBW6y89GB+vS720oOTa30nXLpdGJk2s/+PkvP5ixooP6268O4v3RlFFIZqKqbAtdHlgiceec3bVyt8SHneO75gjhGnltYaMahpVPX+1ypsQINavxnHV2vpNYvqLHlwMBkr+cBmheS7XpFl9IXlvUxNi8vm51uZt8reERp/hO3ogqh4glsu849TWJx57zlPQCl95ESE4jg+x3A5cpOa9ZXhZLw2NOVPr25PYONoKsVoMWjzRlHh8podTYmWlobGjhAOxIJbrKbE3lhir13kIWheOYmVRHJuGWG5BK5lKPDVLPm3SDunlP+FYpPAQSyJoLXzP/HSDvIvBc08nlBV54TLEkgha8aammXPk7wgMP17pWA6xgHvQSr++2Nr6jeT1Stcu+qCBRd72CGLJFcXvqU3NfUO+/MY/bHCRL2dBLCK5yZOev5A3pSQv9w0bTDUNYgHXBpOq+eVWQ7qVt9aru9Klkyji6j+IJb37a9upV9+WnQwrytUe3Yr5cBjE8hC0MitXO3vrJIs21R7divnBEGJ5KPC1v62R7xGv9T64VdpoQax2iONk3v9YdjY8qIpQJO9AriLeXLeByL3SV6msIAQRC8gtUNnVu5yGmFw/3DBVGMQCUqcSnD11ks20qKYRXS/a/B1ieZsKeTrtxOKS6/WIWIDIt7YWjQkPPdkhFpBVS7LWyraLeR8aYmXTO0TKv2ZDWFbRLmVBLM97O7QkLHMhjzUWc30DxPL2Khuq66wsIjUT7q5FjgXk4IJ1iLJIiZRY1TWIWEAuYDmOUtFBKYtKibW9uphr/SCWp4jFtV4H01BARkFnby1h2NIBcgROO0HKwHiTs7uuVdq8QCzS7kob1K6d/SNOkhJrT539312Fb3cGsdphgmVYoYvOUw/qInOx+fkmkW5GPRZws8q0tP59IjdcLnl9ZuWaIn9pBcSSecBzWDBQPuVOpXMnqXmwKZlZtbbw3RkhVvuyyiaqUjZ1cuDMkyXvMFd/Zm/ZUcwJFsRyzasMGinp8Ni9JVeMk78rNe8tYZjFnGARdE1uqTbBdnxDjiqfcqdv6CAP9+2oTi9aRrViH1iI9fPdQGHZhDtqj24lvx9fctV4Vlri6RskX5jn7NpDA36I1Vb/waYlTDOLNUaqqi53CSF+8sgmCBdECEIJDQZ9gwaELhgZGjtKqar0HOZ27EzO+jfV83O43uHCNLM8n8EYVVWIRVhJyH/8YGGYnndFGLO+2sbrY/t0SwgaCmrdqgj9rnc2VRQWCStdO+tHDfAPG6z170t9ena/dvyhGXbNburPS7hSqir9Jw3NZpJljMfi1uathUz72qhYWr8+neY/TbIqS6+78ubU/EXU79vXipT/uP4VLz/6wyeYURbwk/1+iGte/EHy5VeprudpTIKjRwRGnZrNkTJKmxe/X3vx9YSxgrmltt03U2Y9obgqoqmsLEJpLp+IndqG2OQpIpPJn1hEYVTR81r1iuUGt1MMrhc4PLflNA133Geu/zKPVuV7TCBWGyQ+5anUnNeyzswIFkjBL2maPis+9UmqakW+IgqxcmvVSw2Tp/7/CQCjgQXSXCQttp14cHrj/U8RIoq5oA9i5RJnb31s8pTkv151X4yFWECS5iUfxO56wPxsI/X5kFdBrBxgb6+OP/JscvYCkW7O0/I6xCoypb7ZmZw1P/niPHtnDdX1trteBbHaBbwpZX66ITXvzfRbS52aPVRVEajaqlgFaBnlmk23uNXPE0ln117ryy2ZFR8Zq9aaX24RGYNq6r42H0kO+jErbaSRSXsVi2qaseqT+lv+nscdBsbMdZtaKAGgqmJvr2685xGisO8OKjNKOOepNK+LObv2Onvr7JrdPBYnXBCFUTWPSn33HtcFb5tbviE8f2NCneqaQu5AE0LojrLDC3w6L99do6iuuQQtzoVp/fpbAggljFGFFXIRQdh23o/0KKzAQavwU6HS+qcMGMtrEMqmMlFVsaUDAMQCEAtALAAgFoBYAGIBALEAxAIQCwCIBSAWgFgAQCwAsQDEAgBiAYgFIBYAEAtALACxAIBYAGIBiAUAxAIQC0AsACAWgFgAYgEAsQDEAhALAKLizQogL2I1CY5RADnnfwxXHL8YyByOAAAAAElFTkSuQmCC" alt="LSE">
-<h1>LSE Alumni Thailand</h1>
-<p>Alumni community of the London School of Economics and Political Science in Thailand.</p>
-<a href="/khaoyai/">Khao Yai Trip Handbook · 21–23 Nov 2026 →</a>
-</div></body></html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LSE Alumni Association of Thailand</title>
+<meta name="description" content="The home in Thailand for alumni of the London School of Economics and Political Science: gatherings, talks and a network that travels.">
+<link rel="canonical" href="https://lsealumnithailand.org/">
+<meta property="og:title" content="LSE Alumni Association of Thailand">
+<meta property="og:description" content="The home in Thailand for alumni of the London School of Economics and Political Science: gatherings, talks and a network that travels.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lsealumnithailand.org/">
+<meta property="og:image" content="https://lsealumnithailand.org/assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#E0112B">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,75..100,400..800;1,75..100,500..700&family=IBM+Plex+Sans+Thai:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="LSE Alumni Association of Thailand, home">
+      <picture><source srcset="assets/img/logo-lse-alumni-thailand-dark.svg" media="(prefers-color-scheme: dark)"><img class="logo" src="assets/img/logo-lse-alumni-thailand.svg" alt="LSE Alumni Thailand" width="132" height="48"></picture>
+    </a>
+    <button class="menu" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h14M3 14h14"/></svg>
+    </button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="about.html">About</a>
+      <a href="committee.html">Committee</a>
+      <a href="events.html">Events</a>
+      <a href="membership.html">Membership</a>
+      <a class="btn red" href="membership.html#apply">Join us</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="cover">
+  <!-- COVER PHOTOS: to change them, upload new photos to assets/img/ with the same file names -->
+  <div class="slides">
+    <img src="assets/img/cover-centre-building-1200.jpg" srcset="assets/img/cover-centre-building-1200.jpg 1200w, assets/img/cover-centre-building.jpg 1920w" sizes="100vw" alt="The LSE Centre Building and Houghton Street in summer" fetchpriority="high">
+    <img src="assets/img/cover-old-building-1200.jpg" srcset="assets/img/cover-old-building-1200.jpg 1200w, assets/img/cover-old-building.jpg 1920w" sizes="100vw" alt="The entrance to the LSE Old Building on Houghton Street" loading="lazy">
+  </div>
+  <div class="band">
+    <div class="wrap">
+      <h1>From Houghton Street to Bangkok.</h1>
+      <div class="hero-row">
+        <p class="lead">The LSE Alumni Association of Thailand brings together people who studied at the London School of Economics and Political Science and now live or work in Thailand: connections beyond graduation, ideas worth an evening, and friends across every cohort.</p>
+        <div class="actions">
+          <a class="btn red" href="membership.html#apply">Become a member</a>
+          <a class="btn line" href="events.html">See events</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="route" aria-label="LSE alumni in Thailand, in numbers">
+  <div class="fig" data-map="assets/data/map.json"><svg role="img" aria-label="Map highlighting the United Kingdom and Thailand, with the route from LSE in London to Bangkok"></svg></div>
+  <div class="stats">
+    <div><b>1,192</b><span>LSE alumni in Thailand</span></div>
+    <div><b>9,531 km</b><span>from Houghton Street to Bangkok, as the crow flies</span></div>
+  </div>
+  <div class="motto"><span><i>Rerum cognoscere causas</i> · To know the causes of things</span><span>Alumni figure: LSE Alumni Relations, November 2026</span></div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>What we do</h2><p>A friendly association with a simple aim: keep the LSE conversation going after graduation.</p></div><a class="arrow" href="about.html">More about us</a></div>
+    <div class="cols">
+      <div class="rv"><svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="12" r="5"/><circle cx="24" cy="14" r="4"/><path d="M4 30c1-5.5 4.6-8.5 9-8.5s8 3 9 8.5M21 22.4c1-.6 2-.9 3-.9 3.6 0 6.4 2.6 7.2 7.5"/></svg><h3>Gatherings</h3><p>Dinners, Christmas get-togethers and pickleball evenings through the year. Every cohort and discipline is welcome.</p></div>
+      <div class="rv"><svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h24v15H16l-6 5v-5H6z"/><path d="M12 14h12M12 18h8"/></svg><h3>Ideas</h3><p>Talks and roundtables with LSE faculty visiting Bangkok. This year: Professor Elizabeth Robinson, Professor Stefan Collignon and Dr Carmen Nuzzo.</p></div>
+      <div class="rv"><svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="13"/><path d="M5 18h26M18 5c4 4 5.5 8.5 5.5 13S22 27 18 31c-4-4-5.5-8.5-5.5-13S14 9 18 5z"/></svg><h3>Community</h3><p>From welcoming offer holders at LSE Connect to our first joint trip with LSE alumni in Singapore.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Recent activities</h2><p>Highlights from the past few months. More on our Instagram.</p></div><a class="arrow" href="events.html#past">All activities</a></div>
+    <div class="acts">
+      <a class="act rv" href="https://www.instagram.com/reel/DgHXorrRaxv/" rel="noopener">
+        <div class="ph"><img src="assets/img/activities/2026-11-khao-yai-trip.jpg" alt="Khao Yai weekend with LSE Alumni Singapore" loading="lazy"></div>
+        <small>21–23 Nov 2026 · Khao Yai</small>
+        <h3>Khao Yai weekend with LSE Alumni Singapore</h3>
+        <p>Our first joint alumni trip with the LSE Alumni Association of Singapore: a weekend of shared experiences, long conversations and new friendships.</p>
+      </a>
+      <a class="act rv" href="https://www.instagram.com/p/DdwKowhkulu/" rel="noopener">
+        <div class="ph"><img src="assets/img/activities/2026-09-autumn-dinner.jpg" alt="LSE Autumn Dinner 2026" loading="lazy"></div>
+        <small>25 Sep 2026 · The Okura Prestige Bangkok</small>
+        <h3>LSE Autumn Dinner 2026</h3>
+        <p>An evening with Professor Elizabeth Robinson, Director of LSE's Grantham Research Institute, on climate change, food security and environmental policy.</p>
+      </a>
+      <a class="act rv" href="https://www.instagram.com/p/Ddd-tg5EkdB/" rel="noopener">
+        <div class="ph"><img src="assets/img/activities/2026-09-women-founders.jpg" alt="Women Founders & Leaders Club" loading="lazy"></div>
+        <small>14 Sep 2026 · Bangkok</small>
+        <h3>Women Founders & Leaders Club</h3>
+        <p>An intimate dinner with LSE Generate and the LSE Women's Alumni Network on entrepreneurship, leadership and building businesses in Thailand.</p>
+      </a>
+      <a class="act rv" href="https://www.instagram.com/p/DdQlNzykduj/" rel="noopener">
+        <div class="ph"><img src="assets/img/activities/2026-09-pickleball.jpg" alt="LBS x LSE Pickleball Social" loading="lazy"></div>
+        <small>Sep 2026 · Bangkok</small>
+        <h3>LBS x LSE Pickleball Social</h3>
+        <p>Tuesday evenings on court with alumni of London Business School.</p>
+      </a>
+      <a class="act rv" href="https://www.instagram.com/p/DcQeUc3Ef5x/" rel="noopener">
+        <div class="ph"><img src="assets/img/activities/2026-08-eu-roundtable.jpg" alt="Roundtable: Thailand and the European Union" loading="lazy"></div>
+        <small>14 Aug 2026 · Bangkok</small>
+        <h3>Roundtable: Thailand and the European Union</h3>
+        <p>Strategic partnerships between Thailand and the EU, a discussion led by Professor Stefan Collignon of the LSE European Institute.</p>
+      </a>
+      <a class="act rv" href="https://www.instagram.com/p/DYmzFqski3D/" rel="noopener">
+        <div class="ph"><img src="assets/img/activities/2026-06-mothers-mental-health.jpg" alt="Mothers' Mental Health Matters" loading="lazy"></div>
+        <small>4 Jun 2026 · Chulalongkorn University and online</small>
+        <h3>Mothers' Mental Health Matters</h3>
+        <p>LSE-led research on the human and economic costs of perinatal mental health conditions in Thailand, and the launch of the Perinatal Alliance for Mental Health Thailand.</p>
+      </a>
+    </div>
+    <div class="actions" style="margin-top:36px"><a class="btn line" href="https://www.instagram.com/lsealumnithailand" rel="noopener">Follow @lsealumnithailand</a></div>
+  </div>
+</section>
+
+<section class="band" style="background:var(--soft)" id="alumni">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Distinguished alumni</h2><p>A few of the Thai LSE alumni who have shaped public life, scholarship and business. Dr Puey Ungphakorn was also made an Honorary Fellow of the School.</p></div></div>
+    <div class="alums">
+      <article class="alum rv">
+        <div class="badge" aria-hidden="true">BSc<br>PhD</div>
+        <h3>Dr Puey Ungphakorn</h3>
+        <div class="th" lang="th">ดร.ป๋วย อึ๊งภากรณ์</div>
+        <div class="role">Governor, Bank of Thailand, 1959–1971</div>
+        <p>Economist, central banker and educator, later Rector of Thammasat University. Received the Ramon Magsaysay Award for government service in 1965.</p>
+        <small>LSE: BSc and PhD Economics · Honorary Fellow of LSE, 1968</small>
+      </article>
+      <article class="alum rv">
+        <div class="badge" aria-hidden="true">MSc<br>PhD</div>
+        <h3>Dr Piyasvasti Amranand</h3>
+        <div class="th" lang="th">ดร.ปิยสวัสดิ์ อัมระนันทน์</div>
+        <div class="role">Minister of Energy, 2006–2008</div>
+        <p>Headed the National Energy Policy Office in the 1990s, then led Thai Airways as President from 2009 and later chaired PTT.</p>
+        <small>LSE: MSc and PhD Economics</small>
+      </article>
+      <article class="alum rv">
+        <div class="badge" aria-hidden="true">BSc<br>1974</div>
+        <h3>Thirachai Phuvanatnaranubala</h3>
+        <div class="th" lang="th">ธีระชัย ภูวนาถนรานุบาล</div>
+        <div class="role">Minister of Finance, 2011–2012</div>
+        <p>A former Deputy Governor of the Bank of Thailand, he led the Securities and Exchange Commission as Secretary-General from 2003 to 2011.</p>
+        <small>LSE: BSc Economics, 1974</small>
+      </article>
+      <article class="alum rv">
+        <div class="badge" aria-hidden="true">1962</div>
+        <h3>Suchart Chaovisith</h3>
+        <div class="th" lang="th">สุชาติ เชาว์วิศิษฐ</div>
+        <div class="role">Deputy Prime Minister, 2004</div>
+        <p>A career finance official who became Director-General of the Revenue Department, then Minister of Finance from 2003 to 2004.</p>
+        <small>LSE: Economics, 1962</small>
+      </article>
+      <article class="alum rv">
+        <div class="badge" aria-hidden="true">PhD<br>2002</div>
+        <h3>Prof Thitinan Pongsudhirak</h3>
+        <div class="th" lang="th">ฐิตินันท์ พงษ์สุทธิรักษ์</div>
+        <div class="role">Professor of International Relations, Chulalongkorn University</div>
+        <p>A regular Bangkok Post columnist and Visiting Professor at LSE's Saw Swee Hock Southeast Asia Centre. His LSE doctorate won the UK's best dissertation prize.</p>
+        <small>LSE: PhD International Relations, 2002</small>
+      </article>
+      <article class="alum rv">
+        <div class="badge" aria-hidden="true">MSc<br>2005</div>
+        <h3>Panote Sirivadhanabhakdi</h3>
+        <div class="th" lang="th">ปณต สิริวัฒนภักดี</div>
+        <div class="role">Group CEO, Frasers Property, since 2016</div>
+        <p>Leads the real estate group and the One Bangkok development, and generously supported our 2026 roundtable with Professor Stefan Collignon.</p>
+        <small>LSE: MSc, 2005</small>
+      </article>
+    </div>
+    <p class="note" style="margin-top:24px">Compiled from public sources. Corrections and suggestions are welcome via Instagram.</p>
+  </div>
+</section>
+
+<section class="band deep">
+  <div class="wrap split">
+    <div>
+      <h2>Studied at LSE? You already belong.</h2>
+      <p class="lead" style="margin-top:20px">LSE counts 1,192 alumni in Thailand, and membership is open to every one of them. Joining takes a few minutes; we simply check that you studied at LSE.</p>
+      <div class="actions" style="margin-top:28px"><a class="btn red" href="membership.html#apply">Become a member</a><a class="arrow" style="color:#fff" href="membership.html">How joining works</a></div>
+    </div>
+    <ul class="ticks">
+      <li><b>Invitations to events</b>Dinners, talks, socials and trips through the year.</li>
+      <li><b>Bring a guest</b>Partners and friends are welcome at selected events when you register them.</li>
+      <li><b>A network that travels</b>Introductions to LSE alumni groups in other cities when you move or visit.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap split">
+    <div>
+      <h2>Part of a worldwide network</h2>
+      <p class="lead" style="margin-top:20px">LSE alumni meet in cities around the world. Moving on from Thailand, or visiting? There is probably a group waiting for you.</p>
+    </div>
+    <div class="tiles">
+      <a class="tile" href="https://www.lse.ac.uk/alumni-friends-and-partners/international-alumni-groups" rel="noopener"><b>LSE alumni groups</b><span>Find the group in your next city, on lse.ac.uk.</span><span class="arrow">Visit</span></a>
+      <a class="tile" href="https://lsesingapore.org/" rel="noopener"><b>Our friends in Singapore</b><span>LSE Alumni Association of Singapore.</span><span class="arrow">Visit</span></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="foot band tight">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="index.html" aria-label="LSE Alumni Association of Thailand, home">
+        <picture><source srcset="assets/img/logo-lse-alumni-thailand-dark.svg" media="(prefers-color-scheme: dark)"><img class="logo" src="assets/img/logo-lse-alumni-thailand.svg" alt="LSE Alumni Thailand" width="154" height="56"></picture>
+      </a>
+      <p>Run by alumni, for alumni of the London School of Economics and Political Science living and working in Thailand.</p>
+    </div>
+    <div>
+      <h4>Association</h4>
+      <ul>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="committee.html">Committee</a></li>
+        <li><a href="about.html#governance">Governance</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Take part</h4>
+      <ul>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li><a href="about.html#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Elsewhere</h4>
+      <ul>
+        <li><a href="https://www.instagram.com/lsealumnithailand" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.lse.ac.uk/alumni-friends-and-partners/international-alumni-groups" rel="noopener">LSE alumni groups worldwide</a></li>
+        <li><a href="https://www.lse.ac.uk/" rel="noopener">lse.ac.uk</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="legal">
+    <span>© <span data-year>2026</span> LSE Alumni Association of Thailand</span>
+    <a href="privacy.html">Privacy notice</a>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

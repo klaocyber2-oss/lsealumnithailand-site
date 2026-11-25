@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /khaoyai/
+Sitemap: https://lsealumnithailand.org/sitemap.xml
