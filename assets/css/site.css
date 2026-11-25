@@ -79,14 +79,24 @@ h3{font-size:24px;line-height:1.15}
 .route{background:var(--red);color:#fff;position:relative}
 .route .fig{position:relative;height:clamp(330px,40vw,580px);max-width:calc(var(--wrap) + 16vw);margin:0 auto}
 .route svg{position:absolute;inset:0;width:100%;height:100%}
-.route .arc{fill:none;stroke:#fff;stroke-width:2.5;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:0;animation:draw 2.4s cubic-bezier(.6,0,.2,1) .3s both}
-@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+.route .arc{fill:none;stroke:#fff;stroke-width:2.5;stroke-linecap:round;stroke-dasharray:1}
+.route .arc.ghost{stroke-dasharray:2 7;stroke-width:1.5;opacity:.45}
+.route .fig{cursor:pointer}
+.route .land{transition:filter .25s}
+.route .land:hover{filter:drop-shadow(0 0 10px rgba(255,255,255,.85))}
+.route #plane{filter:drop-shadow(0 3px 4px rgba(0,0,0,.3));transition:opacity .3s}
+.route .pulse{opacity:0;transform-box:fill-box;transform-origin:center}
+.route .pulse.on{animation:pulse 1.8s ease-out 3}
+@keyframes pulse{0%{opacity:.9;transform:scale(.6)}100%{opacity:0;transform:scale(3)}}
+.replay{position:absolute;right:max(5vw,20px);top:14px;z-index:2;display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px;border-radius:999px;border:1.5px solid rgba(255,255,255,.7);background:rgba(255,255,255,.08);color:#fff;font:600 14.5px var(--head);cursor:pointer}
+.replay:hover{background:#fff;color:#B30E22}
 .route text{fill:#fff;font-family:var(--head)}
 .stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:var(--wrap);margin:0 auto;padding:0 max(5vw,20px)}
 .stats>div{padding:22px 24px 22px 0;border-top:1px solid rgba(255,255,255,.35)}
 .stats>div+div{padding-left:24px;border-left:1px solid rgba(255,255,255,.35)}
 .stats b{display:block;font-stretch:75%;font-weight:700;font-size:clamp(36px,4.6vw,60px);line-height:1;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
 .stats span{display:block;margin-top:8px;font-size:15.5px;opacity:.92;max-width:18em}
+.stats b span{display:inline;margin:0;font-size:inherit;opacity:1}
 .motto{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;max-width:var(--wrap);margin:0 auto;padding:16px max(5vw,20px) 18px;border-top:1px solid rgba(255,255,255,.28);font-size:15px}
 .motto i{font-style:italic;font-weight:500}
 
@@ -95,10 +105,12 @@ h3{font-size:24px;line-height:1.15}
 .slides{position:absolute;inset:0;z-index:0}
 .cover::before{z-index:1}
 .cover .band{z-index:2}
-.slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:drift 20s ease-in-out infinite alternate}
-.slides img+img{opacity:0;animation:drift 20s ease-in-out infinite alternate,swap 20s ease-in-out infinite}
-@keyframes swap{0%,42%{opacity:0}50%,92%{opacity:1}100%{opacity:0}}
-@keyframes drift{from{transform:scale(1.06)}to{transform:scale(1)}}
+.slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity 1.4s ease,transform 7s ease-out}
+.slides img.on{opacity:1;transform:scale(1)}
+.dots{position:absolute;right:max(5vw,20px);bottom:18px;z-index:3;display:flex;gap:2px}
+.dots button{width:36px;height:44px;border:0;background:none;cursor:pointer;display:grid;place-items:center;padding:0}
+.dots button::before{content:"";width:22px;height:4px;border-radius:2px;background:rgba(255,255,255,.45);transition:background .3s,width .3s}
+.dots button[aria-current=true]::before{background:#fff;width:30px}
 .cover::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,10,10,.84) 0%,rgba(12,10,10,.66) 42%,rgba(12,10,10,.18) 82%),linear-gradient(180deg,rgba(12,10,10,.12) 0%,rgba(12,10,10,.3) 50%,rgba(12,10,10,.8) 100%)}
 .cover .hero-row{grid-template-columns:minmax(0,40em);gap:28px}
 .cover .hero-row .actions{justify-content:flex-start}
@@ -311,9 +323,7 @@ details p{color:var(--mute);margin:-6px 0 22px;max-width:44em}
   .brand small{font-size:14px}
 }
 @media (prefers-reduced-motion:reduce){
-  .slides img{animation:none!important}
-  .slides img+img{opacity:0}
-  .route .arc{animation:none}
+  .slides img{transition:opacity .2s}
   .rv{opacity:1;transform:none;transition:none}
   *{scroll-behavior:auto!important}
 }

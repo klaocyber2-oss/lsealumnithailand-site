@@ -1,4 +1,4 @@
-# LSE Alumni Association of Thailand website
+# LSE Alumni Association Thailand website
 
 Live at **lsealumnithailand.org**. Cloudflare Pages publishes this repository automatically about a minute after any change.
 

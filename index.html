@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LSE Alumni Association of Thailand</title>
+<title>LSE Alumni Association Thailand</title>
 <meta name="description" content="The home in Thailand for alumni of the London School of Economics and Political Science: gatherings, talks and a network that travels.">
 <link rel="canonical" href="https://lsealumnithailand.org/">
-<meta property="og:title" content="LSE Alumni Association of Thailand">
+<meta property="og:title" content="LSE Alumni Association Thailand">
 <meta property="og:description" content="The home in Thailand for alumni of the London School of Economics and Political Science: gatherings, talks and a network that travels.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lsealumnithailand.org/">
@@ -23,7 +23,7 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="LSE Alumni Association of Thailand, home">
+    <a class="brand" href="index.html" aria-label="LSE Alumni Association Thailand, home">
       <picture><source srcset="assets/img/logo-lse-alumni-thailand-dark.svg" media="(prefers-color-scheme: dark)"><img class="logo" src="assets/img/logo-lse-alumni-thailand.svg" alt="LSE Alumni Thailand" width="132" height="48"></picture>
     </a>
     <button class="menu" aria-expanded="false" aria-controls="nav" aria-label="Menu">
@@ -40,16 +40,18 @@
 </header>
 <main id="main">
 <section class="cover">
-  <!-- COVER PHOTOS: to change them, upload new photos to assets/img/ with the same file names -->
+  <!-- COVER PHOTOS: to change one, upload a new landscape photo (about 1920 px wide) to assets/img/ with the same file name. To add one, copy an <img> line below and change both file names. -->
   <div class="slides">
-    <img src="assets/img/cover-centre-building-1200.jpg" srcset="assets/img/cover-centre-building-1200.jpg 1200w, assets/img/cover-centre-building.jpg 1920w" sizes="100vw" alt="The LSE Centre Building and Houghton Street in summer" fetchpriority="high">
+    <img class="on" src="assets/img/cover-centre-building-1200.jpg" srcset="assets/img/cover-centre-building-1200.jpg 1200w, assets/img/cover-centre-building.jpg 1920w" sizes="100vw" alt="The LSE Centre Building and Houghton Street in summer" fetchpriority="high">
     <img src="assets/img/cover-old-building-1200.jpg" srcset="assets/img/cover-old-building-1200.jpg 1200w, assets/img/cover-old-building.jpg 1920w" sizes="100vw" alt="The entrance to the LSE Old Building on Houghton Street" loading="lazy">
+    <img src="assets/img/cover-houghton-street-1200.jpg" srcset="assets/img/cover-houghton-street-1200.jpg 1200w, assets/img/cover-houghton-street.jpg 1920w" sizes="100vw" alt="Houghton Street at dusk" loading="lazy">
   </div>
+  <div class="dots" aria-label="Cover photos"></div>
   <div class="band">
     <div class="wrap">
       <h1>From Houghton Street to Bangkok.</h1>
       <div class="hero-row">
-        <p class="lead">The LSE Alumni Association of Thailand brings together people who studied at the London School of Economics and Political Science and now live or work in Thailand: connections beyond graduation, ideas worth an evening, and friends across every cohort.</p>
+        <p class="lead">The LSE Alumni Association Thailand brings together people who studied at the London School of Economics and Political Science and now live or work in Thailand: connections beyond graduation, ideas worth an evening, and friends across every cohort.</p>
         <div class="actions">
           <a class="btn red" href="membership.html#apply">Become a member</a>
           <a class="btn line" href="events.html">See events</a>
@@ -60,10 +62,13 @@
 </section>
 
 <section class="route" aria-label="LSE alumni in Thailand, in numbers">
-  <div class="fig" data-map="assets/data/map.json"><svg role="img" aria-label="Map highlighting the United Kingdom and Thailand, with the route from LSE in London to Bangkok"></svg></div>
+  <div style="position:relative">
+    <div class="fig" data-map="assets/data/map.json" title="Click to replay the journey"><svg role="img" aria-label="Map highlighting the United Kingdom and Thailand, with the route from LSE in London to Bangkok"></svg></div>
+    <button class="replay" type="button" aria-label="Replay the journey from London to Bangkok">↻ Replay</button>
+  </div>
   <div class="stats">
-    <div><b>1,192</b><span>LSE alumni in Thailand</span></div>
-    <div><b>9,531 km</b><span>from Houghton Street to Bangkok, as the crow flies</span></div>
+    <div><b data-count="1192">1,192</b><span>LSE alumni in Thailand</span></div>
+    <div><b><span data-count="9531" data-follow="1">9,531</span> km</b><span>from Houghton Street to Bangkok, as the crow flies</span></div>
   </div>
   <div class="motto"><span><i>Rerum cognoscere causas</i> · To know the causes of things</span><span>Alumni figure: LSE Alumni Relations, November 2026</span></div>
 </section>
@@ -212,7 +217,7 @@
 <footer class="foot band tight">
   <div class="wrap">
     <div>
-      <a class="brand" href="index.html" aria-label="LSE Alumni Association of Thailand, home">
+      <a class="brand" href="index.html" aria-label="LSE Alumni Association Thailand, home">
         <picture><source srcset="assets/img/logo-lse-alumni-thailand-dark.svg" media="(prefers-color-scheme: dark)"><img class="logo" src="assets/img/logo-lse-alumni-thailand.svg" alt="LSE Alumni Thailand" width="154" height="56"></picture>
       </a>
       <p>Run by alumni, for alumni of the London School of Economics and Political Science living and working in Thailand.</p>
@@ -243,7 +248,7 @@
     </div>
   </div>
   <div class="legal">
-    <span>© <span data-year>2026</span> LSE Alumni Association of Thailand</span>
+    <span>© <span data-year>2026</span> LSE Alumni Association Thailand</span>
     <a href="privacy.html">Privacy notice</a>
   </div>
 </footer>
